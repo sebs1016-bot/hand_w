@@ -19,7 +19,15 @@ def predictDigit(image):
     pred= model.predict(img)
     result = np.argmax(pred[0])
     return result
-
+st.markdown("""
+<style>
+.stApp {
+    background: radial-gradient(circle at top left, #0b0c10, #1f2833, #0b0c10);
+    color: #c5c6c7;
+    font-family: 'Consolas', monospace;
+}
+</style>
+""", unsafe_allow_html=True)
 # Streamlit 
 st.set_page_config(page_title='Reconocimiento de Dígitos escritos a mano', layout='wide')
 st.title('Reconocimiento de Dígitos escritos a mano')
@@ -63,3 +71,4 @@ st.sidebar.text("digitos escritos a mano.")
 st.sidebar.text("Basado en desarrollo de Vinay Uniyal")
 #st.sidebar.text("GitHub Repository")
 #st.sidebar.write("[GitHub Repo Link](https://github.com/Vinay2022/Handwritten-Digit-Recognition)")
+
